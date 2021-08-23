@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background:url("../pictures/background.png");
+    color: white;
+    background-size: auto;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#scoreTable {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding: 0.25rem 2rem;
+    border-radius: 12px;
+    background-color: rgba(177, 191, 106, 0.87);
+
+}
+
+#canvas {
+    border: 6px solid rgba(53, 97, 53, 0.84);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 10%;
+    background:url("../pictures/gameBackground.gif");
+    background-size: cover;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+}
+
+#overlay #card {
+    background-color: rgba(177, 191, 106, 0.87);
+    width: 500px;
+    height: 190px;
+    border-radius: 10%;
+    border: 1px solid #524d4d;
+    display: none;
+    animation: cardIn 0.5s forwards;
+}
+
+#overlay #card > p {
+    font-size: 3rem;
+    margin-top: 1rem;
+    user-select: none;
+}
+
+#overlay #card > button {
+    outline: none;
+    color: white;
+    border: none;
+    background-color: #4c724c;
+    padding: 10px;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes cardIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

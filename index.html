@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Js-game</title>
     <link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
 <section id="overlay">
     <div id="card">
         <p>Ваш счет: <span id="card-score">0</span></p>
-        <button onclick="restartGame(this)">Играем снова?</button>
+        <button id="btn">Играем снова?</button>
     </div>
 </section>
 <p id="scoreTable"> </p>
 <canvas width="800" height="600" id="canvas"></canvas>
-<script src="scripts/script.js"></script>
+<script src="scripts/app.js" defer type="module" ></script>
 </body>
 </html>
